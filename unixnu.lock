@@ -1,0 +1,7 @@
+# Source pins of this transition. Local Meizu/kernel inputs use evidence hashes.
+[source."UniXNU"]
+commit = "04573c510c5fd4892ca6948739389141cc9e05f5"
+[source."DarwinBoot"]
+commit = "3c75734014cdab0acd9541e88057b7606ee7ae08"
+[source."Ace5-reference"]
+commit = "aaa100d19f6fb14e5897a7e496edf7838d4d4e9f"

@@ -1,0 +1,381 @@
+{
+  "source": "<workspace>/Mu-Silicium/Platforms/Meizu/meizu21Pkg/Library/MemoryMapLib/MemoryMapLib.c",
+  "source_sha256": "cd67c77fb899032d0a5555a250e6b9e72122eb75a2b9bde09a6d82e293beb3f0",
+  "source_modified": false,
+  "regions": [
+    {
+      "name": "IPC_ROUTER_TOP",
+      "start": 4194304,
+      "bytes": 1048576,
+      "end": 5242880
+    },
+    {
+      "name": "SECURITY CONTROL",
+      "start": 7864320,
+      "bytes": 65536,
+      "end": 7929856
+    },
+    {
+      "name": "QUP",
+      "start": 8388608,
+      "bytes": 3145728,
+      "end": 11534336
+    },
+    {
+      "name": "PRNG_CFG_PRNG",
+      "start": 17563648,
+      "bytes": 49152,
+      "end": 17612800
+    },
+    {
+      "name": "UFS/CRYPTO/TCSR",
+      "start": 30932992,
+      "bytes": 2621440,
+      "end": 33554432
+    },
+    {
+      "name": "PERIPH_SS",
+      "start": 142606336,
+      "bytes": 2097152,
+      "end": 144703488
+    },
+    {
+      "name": "USB",
+      "start": 174063616,
+      "bytes": 10485760,
+      "end": 184549376
+    },
+    {
+      "name": "AOSS",
+      "start": 184549376,
+      "bytes": 67108864,
+      "end": 251658240
+    },
+    {
+      "name": "TLMM",
+      "start": 251658240,
+      "bytes": 16777216,
+      "end": 268435456
+    },
+    {
+      "name": "IMEM",
+      "start": 342360064,
+      "bytes": 262144,
+      "end": 342622208
+    },
+    {
+      "name": "SMMU",
+      "start": 352321536,
+      "bytes": 2097152,
+      "end": 354418688
+    },
+    {
+      "name": "APSS_HM/GIC",
+      "start": 385875968,
+      "bytes": 33554432,
+      "end": 419430400
+    },
+    {
+      "name": "gunyah_hyp",
+      "start": 2147483648,
+      "bytes": 14680064,
+      "end": 2162163712
+    },
+    {
+      "name": "cpusys_vm",
+      "start": 2162163712,
+      "bytes": 4194304,
+      "end": 2166358016
+    },
+    {
+      "name": "xbl_aop_merged",
+      "start": 2174746624,
+      "bytes": 2490368,
+      "end": 2177236992
+    },
+    {
+      "name": "aop_cmd_db",
+      "start": 2177236992,
+      "bytes": 131072,
+      "end": 2177368064
+    },
+    {
+      "name": "aop_tme_uefi_merged",
+      "start": 2177368064,
+      "bytes": 475136,
+      "end": 2177843200
+    },
+    {
+      "name": "chipinfo",
+      "start": 2177843200,
+      "bytes": 4096,
+      "end": 2177847296
+    },
+    {
+      "name": "smem",
+      "start": 2177892352,
+      "bytes": 2097152,
+      "end": 2179989504
+    },
+    {
+      "name": "adsp_mhi",
+      "start": 2179989504,
+      "bytes": 131072,
+      "end": 2180120576
+    },
+    {
+      "name": "pvmfw",
+      "start": 2185887744,
+      "bytes": 1048576,
+      "end": 2186936320
+    },
+    {
+      "name": "global_sync",
+      "start": 2187329536,
+      "bytes": 1048576,
+      "end": 2188378112
+    },
+    {
+      "name": "tz_stat",
+      "start": 2188378112,
+      "bytes": 1048576,
+      "end": 2189426688
+    },
+    {
+      "name": "qdss",
+      "start": 2189426688,
+      "bytes": 33554432,
+      "end": 2222981120
+    },
+    {
+      "name": "qlink_logging",
+      "start": 2222981120,
+      "bytes": 2097152,
+      "end": 2225078272
+    },
+    {
+      "name": "mpss_dsm",
+      "start": 2259681280,
+      "bytes": 76546048,
+      "end": 2336227328
+    },
+    {
+      "name": "mpss_dsm_2",
+      "start": 2336227328,
+      "bytes": 8388608,
+      "end": 2344615936
+    },
+    {
+      "name": "mpss",
+      "start": 2344615936,
+      "bytes": 255852544,
+      "end": 2600468480
+    },
+    {
+      "name": "q6_mpss_dtb",
+      "start": 2600468480,
+      "bytes": 524288,
+      "end": 2600992768
+    },
+    {
+      "name": "ipa_fw",
+      "start": 2600992768,
+      "bytes": 65536,
+      "end": 2601058304
+    },
+    {
+      "name": "ipa_gsi",
+      "start": 2601058304,
+      "bytes": 40960,
+      "end": 2601099264
+    },
+    {
+      "name": "gpu_microcode",
+      "start": 2601099264,
+      "bytes": 8192,
+      "end": 2601107456
+    },
+    {
+      "name": "spss",
+      "start": 2601123840,
+      "bytes": 1966080,
+      "end": 2603089920
+    },
+    {
+      "name": "spu_secure_sharedory",
+      "start": 2603089920,
+      "bytes": 393216,
+      "end": 2603483136
+    },
+    {
+      "name": "spu_secure_sharedory",
+      "start": 2603483136,
+      "bytes": 131072,
+      "end": 2603614208
+    },
+    {
+      "name": "camera",
+      "start": 2603614208,
+      "bytes": 8388608,
+      "end": 2612002816
+    },
+    {
+      "name": "video",
+      "start": 2612002816,
+      "bytes": 8388608,
+      "end": 2620391424
+    },
+    {
+      "name": "cvp",
+      "start": 2620391424,
+      "bytes": 7340032,
+      "end": 2627731456
+    },
+    {
+      "name": "cdsp",
+      "start": 2627731456,
+      "bytes": 20971520,
+      "end": 2648702976
+    },
+    {
+      "name": "q6_cdsp_dtb",
+      "start": 2648702976,
+      "bytes": 524288,
+      "end": 2649227264
+    },
+    {
+      "name": "q6_adsp_dtb",
+      "start": 2649227264,
+      "bytes": 524288,
+      "end": 2649751552
+    },
+    {
+      "name": "adspslpi",
+      "start": 2649751552,
+      "bytes": 67633152,
+      "end": 2717384704
+    },
+    {
+      "name": "FV Region",
+      "start": 2751463424,
+      "bytes": 4194304,
+      "end": 2755657728
+    },
+    {
+      "name": "ABOOT FV",
+      "start": 2755657728,
+      "bytes": 2097152,
+      "end": 2757754880
+    },
+    {
+      "name": "Port FD Reserved",
+      "start": 2757754880,
+      "bytes": 1048576,
+      "end": 2758803456
+    },
+    {
+      "name": "SEC Heap",
+      "start": 2758803456,
+      "bytes": 573440,
+      "end": 2759376896
+    },
+    {
+      "name": "MMU PageTables",
+      "start": 2759380992,
+      "bytes": 12288,
+      "end": 2759393280
+    },
+    {
+      "name": "UEFI Stack",
+      "start": 2759393280,
+      "bytes": 262144,
+      "end": 2759655424
+    },
+    {
+      "name": "RAM gap",
+      "start": 2759655424,
+      "bytes": 42139648,
+      "end": 2801795072
+    },
+    {
+      "name": "Stock UEFI FD",
+      "start": 2801795072,
+      "bytes": 4194304,
+      "end": 2805989376
+    },
+    {
+      "name": "FD Reserved",
+      "start": 2805989376,
+      "bytes": 2097152,
+      "end": 2808086528
+    },
+    {
+      "name": "Stock Vectors",
+      "start": 2808086528,
+      "bytes": 4096,
+      "end": 2808090624
+    },
+    {
+      "name": "Info Blk",
+      "start": 2808090624,
+      "bytes": 4096,
+      "end": 2808094720
+    },
+    {
+      "name": "Stock UEFI state",
+      "start": 2808094720,
+      "bytes": 10477568,
+      "end": 2818572288
+    },
+    {
+      "name": "RAM gap high",
+      "start": 2818572288,
+      "bytes": 134217728,
+      "end": 2952790016
+    },
+    {
+      "name": "DXE Heap",
+      "start": 2952790016,
+      "bytes": 671088640,
+      "end": 3623878656
+    },
+    {
+      "name": "tz_merged",
+      "start": 3623878656,
+      "bytes": 8388608,
+      "end": 3632267264
+    },
+    {
+      "name": "Display Reserved",
+      "start": 3818127360,
+      "bytes": 12582912,
+      "end": 3830710272
+    },
+    {
+      "name": "XNU Payload",
+      "start": 4026531840,
+      "bytes": 58720256,
+      "end": 4085252096
+    },
+    {
+      "name": "trust_ui_vm",
+      "start": 4085252096,
+      "bytes": 71303168,
+      "end": 4156555264
+    },
+    {
+      "name": "oem_vm",
+      "start": 4156555264,
+      "bytes": 79691776,
+      "end": 4236247040
+    },
+    {
+      "name": "llcc_lpi",
+      "start": 4286578688,
+      "bytes": 6291456,
+      "end": 4292870144
+    }
+  ],
+  "overlaps": [],
+  "firmware_memorymap_file_changed": false
+}

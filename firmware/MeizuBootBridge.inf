@@ -1,0 +1,30 @@
+[Defines]
+  INF_VERSION = 0x0001001B
+  BASE_NAME = MeizuBootBridge
+  FILE_GUID = D17C9C09-1DA4-4B2F-A457-6A2A3428D683
+  MODULE_TYPE = UEFI_APPLICATION
+  ENTRY_POINT = MeizuBootBridgeEntry
+[Sources]
+  MeizuBootBridge.c
+  BridgeAssets.c
+[Packages]
+  MdePkg/MdePkg.dec
+  UniXNUPkg/UniXNUPkg.dec
+[LibraryClasses]
+  BaseLib
+  BaseMemoryLib
+  MemoryAllocationLib
+  UefiApplicationEntryPoint
+  UefiBootServicesTableLib
+  UefiRuntimeServicesTableLib
+  UefiLib
+  DevicePathLib
+[Guids]
+  gEfiFileInfoGuid
+  gEfiFileSystemInfoGuid
+[Protocols]
+  gEfiDevicePathProtocolGuid
+  gEfiSimpleFileSystemProtocolGuid
+  gEfiGraphicsOutputProtocolGuid
+  gEfiLoadedImageProtocolGuid
+  gUniXNULoaderProtocolGuid

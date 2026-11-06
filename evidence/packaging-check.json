@@ -1,0 +1,21 @@
+{
+  "image": "uefi-r20-unixnu-transition.img",
+  "image_sha256": "d4b3d5f61bd2570470c7b67bd61222f23ee05c18adb69dd2bafa92ccc600699b",
+  "bytes": 28471296,
+  "mode": "UniXNU + Darwin22 compatibility; native DarwinBoot migration pending",
+  "baseline_r19_sha256": "20a1a8e0fc4374bb559bfb2e8aac070d25ae61ed758f95a7e45f948d13047505",
+  "bridge_sha256": "230be6829c4cfc4cfc2fe8a00ff2a8ee4dee80fd8eb7164265e7f4b0775821e4",
+  "bridge_bytes": 19456,
+  "menu_sha256": "3ec29be05c83c3205811a8c347cd8a02a36407fb76dc56e384857b46a6c051ce",
+  "legacy_loader_sha256": "0be90c0061279e2f3c528b6310a1d6091735f8e7fbd410a0fa28b757dc5481fe",
+  "kernel_sha256": "94929bfb93911f89b19d81a370553a325ba997e97ebff8ddd2da4b2d1b249c13",
+  "fd_sha256": "647e87221beaec758693fb6e88bb525017136588ce7e1e0c24192abd6b7c9f0c",
+  "inner_files": 54,
+  "unchanged_inner_files": 53,
+  "inner_fv_layout_unchanged": true,
+  "kernel_root_cmdline_unchanged": true,
+  "shim_dtb_memorymap_unchanged": true,
+  "super_access": "none",
+  "flashed": false,
+  "hardware_tested": false
+}

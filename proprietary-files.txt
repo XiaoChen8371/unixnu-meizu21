@@ -1,0 +1,6 @@
+# Local-only input pins. Never publish the referenced binaries.
+# The protected phone super partition is not an input to these scripts.
+uefi-r19-clean-boot.img sha256=20a1a8e0fc4374bb559bfb2e8aac070d25ae61ed758f95a7e45f948d13047505
+LegacyLoader.efi sha256=0be90c0061279e2f3c528b6310a1d6091735f8e7fbd410a0fa28b757dc5481fe
+kernel.macho sha256=94929bfb93911f89b19d81a370553a325ba997e97ebff8ddd2da4b2d1b249c13
+# SDK, identity.h and the ramdisk remain local in the preserved existing inputs.

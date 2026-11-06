@@ -1,0 +1,46 @@
+schema_version = 2
+[board]
+example = false
+name = "meizu21"
+soc = "SM8650"
+soc_source = "sm8650-meizu"
+os_profile = "ios-16.5-meizu-darwin22"
+description = "Meizu 21: UniXNU transition with retained Darwin22 kernel and protected APFS root"
+kit = "meizu21"
+[arch]
+page_size = 16384
+[components]
+# The native loader is selected for the next migration stage, not shipped in r20.
+# ArmCpu/ArmDTPlatform/Adreno740 target another ABI or GPU; do not select them yet.
+include = ["DarwinBoot"]
+[kernel]
+defconfig = "meizu21_transition_defconfig"
+config_fragments = []
+patch_series = ["device:patches/xnu/series"]
+archives = []
+[device_tree]
+source = "device:dts/meizu21-inventory.dts"
+include_dirs = []
+[firmware]
+config = "meizu21"
+dsc = "Platforms/Meizu/meizu21Pkg/meizu21.dsc"
+fd = "Build/meizu21Pkg/{target}_CLANGPDB/FV/SILICIUM_UEFI.fd"
+packages = ["{uefi}", "{tree}/package", "{tree}/drivers/DarwinBoot", "{edk2}"]
+[payload]
+title = "iOS 16.5"
+kernel_args = ["-q", "keepsyms=1", "meizu_ufs=1", "root_apfs=ufs_super", "meizu_touch_probe=9", "meizu_touch_live=600", "meizu_touch_persistent=1", "meizu_touch_quiet=1", "debug=0x8"]
+[package]
+unixnu = "../UniXNU"
+[package.defconfig]
+"ios-16.5-meizu-darwin22" = "meizu21_transition_defconfig"
+[meizu_transition]
+enabled = true
+kernel_provider = "../kernel-ios16"
+recipe = "scripts/package.sh"
+native_darwinboot = false
+hardware_verified = false
+super_access = "never-write"
+boot_partition = "boot_b"
+preserve_partition = "boot_a"
+firmware_provider = "exact-r19-debug-baseline"
+payload_provider = "MeizuBootBridge read-only XNUP filesystem"

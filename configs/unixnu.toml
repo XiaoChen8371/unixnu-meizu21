@@ -1,0 +1,15 @@
+version = 1
+[boot]
+timeout = 2
+default = "ios16"
+rotate = 0
+[ui]
+title = "UniXNU - Meizu 21"
+[kits]
+autoload = false
+[[entry]]
+id = "ios16"
+title = "iOS 16.5"
+type = "xnu"
+path = "Payloads/kernel.macho"
+args = "-q keepsyms=1 meizu_ufs=1 root_apfs=ufs_super meizu_touch_probe=9 meizu_touch_live=600 meizu_touch_persistent=1 meizu_touch_quiet=1 debug=0x8"

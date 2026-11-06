@@ -1,0 +1,10 @@
+{
+  "source": "<workspace>/unixnu-port/kernel-ios16",
+  "base_commit": "c54f35ca767986246321eb901baf8f5ff7923f6a",
+  "source_files": 5115,
+  "manifest_sha256": "17f78f16f15c79ca486883bfc2d57400529d0c150ef5b5a27b2a3a6df6f87820",
+  "archive": "<workspace>/unixnu-port/UniXNU-meizu21/.cache/kernel-snapshot/source-17f78f16f15c79ca.tar.gz",
+  "independent_copy": true,
+  "kernel_rebuilt": false,
+  "retained_kernel_sha256": "94929bfb93911f89b19d81a370553a325ba997e97ebff8ddd2da4b2d1b249c13"
+}

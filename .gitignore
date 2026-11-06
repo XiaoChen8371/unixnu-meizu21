@@ -1,0 +1,12 @@
+.cache/
+out/
+local.toml
+local-inputs.env
+firmware/BridgeAssets.c
+firmware/BridgeAssets.h
+firmware/LoaderBlob.c
+*.efi
+*.img
+*.bin
+*.macho
+__pycache__/

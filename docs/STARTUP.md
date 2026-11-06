@@ -21,7 +21,7 @@ DarwinBoot 迁移和 GPU 硬件加速。
 6. 有权使用的 iOS 16.5 内核、ramdisk、加载器和设备树；r20 使用固定
    boot image 中已经验证的组合，不要自行替换其中任意一项。
 
-`LOCAL-INPUTS.example.env` 列出了所有可配置路径。
+`configs/local-inputs.example.env` 列出了所有可配置路径。
 
 ## 推荐目录
 
@@ -52,7 +52,7 @@ workspace/
 ## 配置和校验
 
 ```sh
-cp LOCAL-INPUTS.example.env local-inputs.env
+cp configs/local-inputs.example.env local-inputs.env
 . ./local-inputs.env
 python3 scripts/verify-local-inputs.py
 bash scripts/package.sh --check

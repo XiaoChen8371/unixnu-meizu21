@@ -1,0 +1,34 @@
+/dts-v1/;
+/* Inventory input, compiled for validation. r20 still uses the exact baseline
+ * Android firmware DTB, and the compatibility loader generates the Apple ADT.
+ * This file is not a replacement ADT or permission to change reservations.
+ */
+/ {
+    model = "Meizu 21";
+    compatible = "meizu,meizu21", "qcom,sm8650";
+    #address-cells = <2>;
+    #size-cells = <2>;
+    memory@b0000000 {
+        device_type = "memory";
+        reg = <0 0xb0000000 0 0x28000000>;
+    };
+    reserved-memory {
+        #address-cells = <2>;
+        #size-cells = <2>;
+        ranges;
+        firmware@a4000000 { reg = <0 0xa4000000 0 0x400000>; no-map; };
+        framebuffer@e3940000 { reg = <0 0xe3940000 0 0xc00000>; no-map; };
+        payload@f0000000 { reg = <0 0xf0000000 0 0x3800000>; no-map; };
+    };
+    chosen { bootargs = "cpus=1"; };
+    framebuffer {
+        compatible = "simple-framebuffer";
+        width = <1080>; height = <2340>; stride = <4320>;
+        format = "a8r8g8b8";
+    };
+    gpu@3d00000 {
+        compatible = "qcom,adreno-750";
+        reg = <0 0x03d00000 0 0x40000>;
+        status = "disabled";
+    };
+};

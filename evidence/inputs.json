@@ -1,0 +1,13 @@
+{
+  "baseline_r19_sha256": "20a1a8e0fc4374bb559bfb2e8aac070d25ae61ed758f95a7e45f948d13047505",
+  "kernel_sha256": "94929bfb93911f89b19d81a370553a325ba997e97ebff8ddd2da4b2d1b249c13",
+  "loader_sha256": "0be90c0061279e2f3c528b6310a1d6091735f8e7fbd410a0fa28b757dc5481fe",
+  "menu_sha256": "3ec29be05c83c3205811a8c347cd8a02a36407fb76dc56e384857b46a6c051ce",
+  "cmdline": "-q keepsyms=1 meizu_ufs=1 root_apfs=ufs_super meizu_touch_probe=9 meizu_touch_live=600 meizu_touch_persistent=1 meizu_touch_quiet=1 debug=0x8",
+  "mode": "UniXNU boot manager + UNIXNU_LOADER_PROTOCOL + Darwin22 compatibility",
+  "native_darwinboot": false,
+  "hardware_tested": false,
+  "flashed": false,
+  "super_write_allowed": false,
+  "boot_a_write_allowed": false
+}

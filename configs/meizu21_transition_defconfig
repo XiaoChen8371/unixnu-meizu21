@@ -1,0 +1,7 @@
+# Transition kernel is the pinned, linked Darwin22 image; build with package.sh.
+# New UniXNU kernel archives are not ABI-compatible replacements yet.
+CONFIG_XNU_BUILD_ARCHIVES=n
+CONFIG_XNU_ARM_DT_PLATFORM=n
+CONFIG_XNU_ARMCPU=n
+CONFIG_XNU_NATIVE_ADRENO=n
+CONFIG_XNU_MEIZU_RETAINED_KERNEL=y

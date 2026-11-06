@@ -1,0 +1,14 @@
+[os]
+name = "ios-16.5-meizu-darwin22"
+arch = "arm64"
+darwin = "22.5.0"
+xnu_version = "8796.121.2"
+xnu_revision = "c54f35ca767986246321eb901baf8f5ff7923f6a"
+ios_version = "16.5"
+# The working source has a local MasterVersion 22.5.0 and extra board patches.
+# The preserved source manifest, not this upstream commit alone, identifies it.
+abi = ["Meizu retained Darwin22 kernel", "HakiOS HID/userland bridge"]
+[kernel]
+config_fragments = []
+patch_series = ["device:patches/xnu/series"]
+archives = []

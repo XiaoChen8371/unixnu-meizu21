@@ -1,0 +1,305 @@
+{
+  "schema_version": 2,
+  "device": "<workspace>/unixnu-port/UniXNU-meizu21",
+  "name": "meizu21",
+  "output": "<workspace>/unixnu-port/UniXNU/out/meizu21/ios-16.5-meizu-darwin22/meizu21_transition",
+  "configuration": "meizu21_transition_defconfig",
+  "build_config": null,
+  "config_path": "<workspace>/unixnu-port/UniXNU/out/meizu21/ios-16.5-meizu-darwin22/meizu21_transition/.config",
+  "configured": true,
+  "profiles": {
+    "arch": "<workspace>/unixnu-port/UniXNU/profiles/arch/arm64",
+    "soc": "<workspace>/unixnu-port/UniXNU-meizu21/profiles/soc/sm8650",
+    "os": "<workspace>/unixnu-port/UniXNU/profiles/os/ios-16.5-meizu-darwin22",
+    "device": "<workspace>/unixnu-port/UniXNU-meizu21"
+  },
+  "configuration_sources": [
+    "<workspace>/unixnu-port/UniXNU/profiles/arch/arm64/profile.toml",
+    "<workspace>/unixnu-port/UniXNU-meizu21/profiles/soc/sm8650/soc.toml",
+    "<workspace>/unixnu-port/UniXNU/profiles/os/ios-16.5-meizu-darwin22/profile.toml",
+    "<workspace>/unixnu-port/UniXNU-meizu21/board.toml"
+  ],
+  "board": {
+    "arch": {
+      "name": "arm64",
+      "page_size": 16384
+    },
+    "components": {
+      "include": [
+        "DarwinBoot"
+      ]
+    },
+    "kernel": {
+      "config_fragments": [],
+      "patch_series": [
+        "device:patches/xnu/series"
+      ],
+      "archives": [],
+      "defconfig": "meizu21_transition_defconfig"
+    },
+    "soc": {
+      "name": "SM8650",
+      "description": "Meizu inventory and retained drivers; native UniXNU platform operations pending"
+    },
+    "os": {
+      "name": "ios-16.5-meizu-darwin22",
+      "arch": "arm64",
+      "darwin": "22.5.0",
+      "xnu_version": "8796.121.2",
+      "xnu_revision": "c54f35ca767986246321eb901baf8f5ff7923f6a",
+      "ios_version": "16.5",
+      "abi": [
+        "Meizu retained Darwin22 kernel",
+        "HakiOS HID/userland bridge"
+      ]
+    },
+    "schema_version": 2,
+    "board": {
+      "example": false,
+      "name": "meizu21",
+      "soc": "SM8650",
+      "soc_source": "sm8650-meizu",
+      "os_profile": "ios-16.5-meizu-darwin22",
+      "description": "Meizu 21: UniXNU transition with retained Darwin22 kernel and protected APFS root",
+      "kit": "meizu21"
+    },
+    "device_tree": {
+      "source": "device:dts/meizu21-inventory.dts",
+      "include_dirs": []
+    },
+    "firmware": {
+      "config": "meizu21",
+      "dsc": "Platforms/Meizu/meizu21Pkg/meizu21.dsc",
+      "fd": "Build/meizu21Pkg/{target}_CLANGPDB/FV/SILICIUM_UEFI.fd",
+      "packages": [
+        "{uefi}",
+        "{tree}/package",
+        "{tree}/drivers/DarwinBoot",
+        "{edk2}"
+      ]
+    },
+    "payload": {
+      "title": "iOS 16.5",
+      "kernel_args": [
+        "-q",
+        "keepsyms=1",
+        "meizu_ufs=1",
+        "root_apfs=ufs_super",
+        "meizu_touch_probe=9",
+        "meizu_touch_live=600",
+        "meizu_touch_persistent=1",
+        "meizu_touch_quiet=1",
+        "debug=0x8"
+      ]
+    },
+    "package": {
+      "unixnu": "../UniXNU",
+      "defconfig": {
+        "ios-16.5-meizu-darwin22": "meizu21_transition_defconfig"
+      }
+    },
+    "meizu_transition": {
+      "enabled": true,
+      "kernel_provider": "../kernel-ios16",
+      "recipe": "scripts/package.sh",
+      "native_darwinboot": false,
+      "hardware_verified": false,
+      "super_access": "never-write",
+      "boot_partition": "boot_b",
+      "preserve_partition": "boot_a",
+      "firmware_provider": "exact-r19-debug-baseline",
+      "payload_provider": "MeizuBootBridge read-only XNUP filesystem"
+    }
+  },
+  "components": [
+    {
+      "id": "DarwinBoot",
+      "kind": "driver",
+      "function": "UEFI XNU loader",
+      "scope": "firmware",
+      "repository": "https://github.com/UniXNU/DarwinBoot.git",
+      "revision": "3c75734014cdab0acd9541e88057b7606ee7ae08",
+      "path": "drivers/DarwinBoot",
+      "hardware": [
+        "ARM64 UEFI"
+      ],
+      "os_abi": [],
+      "board_dependencies": [],
+      "verified_devices": [],
+      "dependencies": [],
+      "source_files": [],
+      "runtime_identifiers": [],
+      "build_stage": "firmware",
+      "build": [],
+      "outputs": []
+    }
+  ],
+  "modules": [
+    {
+      "kind": "driver",
+      "name": "DarwinBoot",
+      "path": "<workspace>/unixnu-port/UniXNU/drivers/DarwinBoot",
+      "origin": "base",
+      "local": false,
+      "revision": "3c75734014cdab0acd9541e88057b7606ee7ae08",
+      "pin": "3c75734014cdab0acd9541e88057b7606ee7ae08",
+      "scope": "firmware",
+      "repository": "https://gh-proxy.com/https://github.com/unixnu/darwinboot"
+    },
+    {
+      "kind": "package",
+      "name": "main",
+      "path": "<workspace>/unixnu-port/UniXNU/package",
+      "origin": "base",
+      "local": false,
+      "revision": "04573c510c5fd4892ca6948739389141cc9e05f5",
+      "pin": null,
+      "scope": null,
+      "repository": null
+    },
+    {
+      "kind": "patch",
+      "name": "libpthread",
+      "path": "<workspace>/unixnu-port/UniXNU/patches/libpthread",
+      "origin": "base",
+      "local": false,
+      "revision": "04573c510c5fd4892ca6948739389141cc9e05f5",
+      "pin": null,
+      "scope": null,
+      "repository": null
+    },
+    {
+      "kind": "patch",
+      "name": "mesa",
+      "path": "<workspace>/unixnu-port/UniXNU/patches/mesa",
+      "origin": "base",
+      "local": false,
+      "revision": "04573c510c5fd4892ca6948739389141cc9e05f5",
+      "pin": null,
+      "scope": null,
+      "repository": null
+    },
+    {
+      "kind": "patch",
+      "name": "xnu",
+      "path": "<workspace>/unixnu-port/UniXNU-meizu21/patches/xnu",
+      "origin": "device",
+      "local": false,
+      "revision": "63f39b92ede3d30c53f8317d5607bb2ceb099342",
+      "pin": null,
+      "scope": null,
+      "repository": null
+    },
+    {
+      "kind": "patch",
+      "name": "xnu-12377",
+      "path": "<workspace>/unixnu-port/UniXNU/patches/xnu-12377",
+      "origin": "base",
+      "local": false,
+      "revision": "04573c510c5fd4892ca6948739389141cc9e05f5",
+      "pin": null,
+      "scope": null,
+      "repository": null
+    },
+    {
+      "kind": "refer",
+      "name": "AvailabilityVersions",
+      "path": null,
+      "origin": "git",
+      "local": false,
+      "revision": null,
+      "pin": "933f9360f1b70dfbda5548386a3d65e0358b4f7d",
+      "scope": null,
+      "repository": "https://github.com/apple-oss-distributions/AvailabilityVersions.git"
+    },
+    {
+      "kind": "refer",
+      "name": "IOStorageFamily",
+      "path": null,
+      "origin": "git",
+      "local": false,
+      "revision": null,
+      "pin": "e45fbe30a7879e0b16e26dddb78538f1b00e0bff",
+      "scope": null,
+      "repository": "https://github.com/apple-oss-distributions/IOStorageFamily.git"
+    },
+    {
+      "kind": "refer",
+      "name": "corecrypto-2023",
+      "path": null,
+      "origin": "git",
+      "local": false,
+      "revision": null,
+      "pin": "11fba65b12d8830630e248dfa8344caf8b065f26",
+      "scope": null,
+      "repository": "https://github.com/ONLYA/corecrypto-2023.git"
+    },
+    {
+      "kind": "refer",
+      "name": "edk2",
+      "path": "<workspace>/Mu-Silicium/Mu_Basecore",
+      "origin": "local (feeds)",
+      "local": true,
+      "revision": "3c9c7b2e211e62d2a954ad760a36fe05adc43aa3",
+      "pin": null,
+      "scope": null,
+      "repository": "https://gh-proxy.com/https://github.com/microsoft/mu_basecore"
+    },
+    {
+      "kind": "refer",
+      "name": "libdispatch",
+      "path": null,
+      "origin": "git",
+      "local": false,
+      "revision": null,
+      "pin": "30fe6a7d945340ce69cef121132f049e810089a5",
+      "scope": null,
+      "repository": "https://github.com/apple-oss-distributions/libdispatch.git"
+    },
+    {
+      "kind": "refer",
+      "name": "libplatform",
+      "path": null,
+      "origin": "git",
+      "local": false,
+      "revision": null,
+      "pin": "a00a4cc36da2110578bcf3b8eeeeb93dcc7f4e11",
+      "scope": null,
+      "repository": "https://github.com/apple-oss-distributions/libplatform.git"
+    },
+    {
+      "kind": "refer",
+      "name": "libpthread",
+      "path": null,
+      "origin": "git",
+      "local": false,
+      "revision": null,
+      "pin": "c0e60fb5ecfc54cf379c261d3f9572cc22ded891",
+      "scope": null,
+      "repository": "https://github.com/apple-oss-distributions/libpthread.git"
+    },
+    {
+      "kind": "refer",
+      "name": "xnu",
+      "path": "<workspace>/unixnu-port/kernel-ios16",
+      "origin": "local (feeds)",
+      "local": true,
+      "revision": "c54f35ca767986246321eb901baf8f5ff7923f6a",
+      "pin": null,
+      "scope": null,
+      "repository": "https://gh-proxy.com/https://github.com/apple-oss-distributions/xnu"
+    },
+    {
+      "kind": "soc",
+      "name": "sm8650-meizu",
+      "path": "<workspace>/unixnu-port/UniXNU-meizu21/profiles/soc/sm8650",
+      "origin": "local (feeds)",
+      "local": true,
+      "revision": "63f39b92ede3d30c53f8317d5607bb2ceb099342",
+      "pin": null,
+      "scope": null,
+      "repository": null
+    }
+  ],
+  "patch_order": []
+}

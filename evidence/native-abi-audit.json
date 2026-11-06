@@ -1,0 +1,24 @@
+{
+  "retained_kernel": {
+    "bytes": 736,
+    "command_line_bytes": 608,
+    "device_tree_offset": 96,
+    "command_line_offset": 108,
+    "memory_size_actual_offset": 728
+  },
+  "native_darwinboot": {
+    "bytes": 1152,
+    "command_line_bytes": 1024,
+    "device_tree_offset": 96,
+    "command_line_offset": 108,
+    "memory_size_actual_offset": 1144
+  },
+  "compatible_without_porting": false,
+  "remaining": [
+    "608-byte command line and 736-byte boot_args",
+    "32 MiB/16 KiB placement and retained virtual-base mapping",
+    "actual contiguous allocation versus 6 GiB reported memory and ADT dram policy",
+    "watchdog, ADT, root and HID/userland services; kernel return context ownership"
+  ],
+  "native_darwinboot_enabled": false
+}

@@ -1,0 +1,29 @@
+name: static-check
+
+on:
+  workflow_dispatch:
+  push:
+  pull_request:
+
+jobs:
+  source:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Compile Python tools
+        run: python3 -m py_compile scripts/*.py
+      - name: Check shell syntax
+        run: |
+          bash -n scripts/*.sh
+      - name: Check required documentation and pins
+        run: |
+          test -f README.md
+          test -f docs/STARTUP.md
+          test -f docs/BUILDING.md
+          test -f docs/FLASHING.md
+          test -f unixnu.lock
+          grep -q "04573c510c5fd4892ca6948739389141cc9e05f5" unixnu.lock
+          grep -q "20a1a8e0fc4374bb559bfb2e8aac070d25ae61ed758f95a7e45f948d13047505" scripts/verify-local-inputs.py

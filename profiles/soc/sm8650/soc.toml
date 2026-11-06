@@ -1,0 +1,5 @@
+[soc]
+name = "SM8650"
+description = "Meizu inventory and retained drivers; native UniXNU platform operations pending"
+[components]
+include = []

@@ -31,7 +31,7 @@
 - 完整的 r19、r20 boot image
 - 手机分区备份和 `super` 内容
 
-`proprietary-files.txt` 只记录哈希，不表示仓库有权重新分发对应文件。
+`../proprietary-files.txt` 只记录哈希，不表示仓库有权重新分发对应文件。
 
 ## 本仓库新增代码
 

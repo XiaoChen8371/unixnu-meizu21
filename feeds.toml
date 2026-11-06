@@ -1,0 +1,15 @@
+[[source]]
+name = "sm8650-meizu"
+kind = "soc"
+local = "profiles/soc/sm8650"
+
+# These inputs are inherited from the existing Linux toolchain. No IPSW/root
+# generation is needed for the transition; the on-device super stays intact.
+[[source]]
+name = "xnu"
+kind = "refer"
+local = "../kernel-ios16"
+[[source]]
+name = "edk2"
+kind = "refer"
+local = "../Mu-Silicium/Mu_Basecore"

@@ -23,6 +23,28 @@ DarwinBoot 迁移和 GPU 硬件加速。
 
 `configs/local-inputs.example.env` 列出了所有可配置路径。
 
+## 对应项目链接
+
+| 项目或文件 | 公开来源 | 版本 |
+| --- | --- | --- |
+| UniXNU | [UniXNU/UniXNU](https://github.com/UniXNU/UniXNU) | `04573c510c5fd4892ca6948739389141cc9e05f5` |
+| DarwinBoot | [UniXNU/DarwinBoot](https://github.com/UniXNU/DarwinBoot) | `3c75734014cdab0acd9541e88057b7606ee7ae08` |
+| Mu-Silicium / EDK2 | [Project-Silicium/Mu-Silicium](https://github.com/Project-Silicium/Mu-Silicium) | 本地 `Mu_Basecore` 源码 |
+| `mkbootimg.py` | [Mu-Silicium](https://github.com/Project-Silicium/Mu-Silicium) 的 `Resources/Scripts/` | 与所用基线配套 |
+| OnePlus Ace 5 | [tycykp/UniXNU-OnePlus-Ace5](https://github.com/tycykp/UniXNU-OnePlus-Ace5) | `aaa100d19f6fb14e5897a7e496edf7838d4d4e9f` |
+| 魅族 20 Classic | [RiverKawa271828/UniXNU-m2381](https://github.com/RiverKawa271828/UniXNU-m2381) | 参考实现 |
+| 小米 14 | [lonzzi/UniXNU-houji](https://github.com/lonzzi/UniXNU-houji) | SM8650/A750 参考实现 |
+| HackiOS | [oosexgang/hakios-xnu-kernel](https://github.com/oosexgang/hakios-xnu-kernel) | compatibility-chain 参考 |
+| iOS Sweet | [dipa-studio/ios-sweet](https://github.com/dipa-studio/ios-sweet) | compatibility-chain 参考 |
+| Apple XNU | [apple-oss-distributions/xnu](https://github.com/apple-oss-distributions/xnu) | ABI 参考 |
+| SM8650 原厂图形源码 | [OnePlusOSS SM8650](https://github.com/OnePlusOSS/android_kernel_modules_and_devicetree_oneplus_sm8650) | `453d8875f815bf9dfad9035982861226a4823a6c` |
+
+`uefi-r19-clean-boot.img`、`SplashFbDxe-r19.efi`、iOS 内核、ramdisk、
+加载器、Apple SDK 和原厂固件没有可随本项目公开分发的统一下载源，必须按
+`proprietary-files.txt` 的哈希和本地设备状态自行准备。
+
+机器可读版本表见仓库根目录的 `sources.json`。
+
 ## 推荐目录
 
 ```text

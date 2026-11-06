@@ -116,12 +116,20 @@ QEMU 和构建检查不能替代真机结果。
 
 ## 来源与依赖
 
-- UniXNU：`04573c510c5fd4892ca6948739389141cc9e05f5`
-- DarwinBoot：`3c75734014cdab0acd9541e88057b7606ee7ae08`
-- OnePlus Ace 5 reference：`aaa100d19f6fb14e5897a7e496edf7838d4d4e9f`
+- [UniXNU](https://github.com/UniXNU/UniXNU)：`04573c510c5fd4892ca6948739389141cc9e05f5`
+- [DarwinBoot](https://github.com/UniXNU/DarwinBoot)：`3c75734014cdab0acd9541e88057b7606ee7ae08`
+- [Mu-Silicium](https://github.com/Project-Silicium/Mu-Silicium)：UEFI/EDK2 和打包工具
+- [OnePlus Ace 5](https://github.com/tycykp/UniXNU-OnePlus-Ace5)：`aaa100d19f6fb14e5897a7e496edf7838d4d4e9f`
+- [魅族 20 Classic](https://github.com/RiverKawa271828/UniXNU-m2381)
+- [小米 14](https://github.com/lonzzi/UniXNU-houji)
+- [HackiOS](https://github.com/oosexgang/hakios-xnu-kernel)
+- [SM8650 原厂图形源码](https://github.com/OnePlusOSS/android_kernel_modules_and_devicetree_oneplus_sm8650)
 
 感谢 UniXNU、Mu-Silicium、DarwinBoot、HackiOS、OnePlus Ace 5、
 Meizu m2381、Xiaomi houji 等公开移植项目提供的源码和调查记录。
+
+完整的机器可读来源表见 [sources.json](sources.json)，逐项输入说明见
+[启动指南](docs/STARTUP.md)。
 
 仓库混合了多种上游许可证，详见 [COPYING.md](COPYING.md) 和
 [docs/THIRD_PARTY.md](docs/THIRD_PARTY.md)。

@@ -27,7 +27,7 @@ This is a transition-stage port. UniXNU provides the menu and loader protocol, w
 
 ## Source snapshot
 
-The r20 device adaptation source is stored in [r20-device-source.tar](r20-device-source.tar). It includes the board profile, bridge source, packaging checks, memory-map audit, kernel-source inventory, and device evidence.
+The r20 device adaptation source is stored in [device-source-r20.tar](device-source-r20.tar). It includes the board profile, bridge source, packaging checks, memory-map audit, kernel-source inventory, and device evidence.
 
 The corresponding uncompiled upstream inputs are pinned in unixnu.lock inside the archive:
 

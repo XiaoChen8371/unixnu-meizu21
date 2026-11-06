@@ -11,7 +11,7 @@ DarwinBoot、板级驱动和 GPU 图形栈。
 [功能状态](docs/STATUS.md) ·
 [架构](docs/ARCHITECTURE.md) ·
 [开发指南](docs/DEVELOPMENT.md) ·
-[问题反馈](https://github.com/wuyuchen114514/unixnu-meizu21/issues)
+[问题反馈](https://github.com/XiaoChen8371/unixnu-meizu21/issues)
 
 > 开发阶段项目，不适合作为日常系统。刷机和替换分区可能导致数据丢失。
 > 构建成功或主机测试通过不代表硬件功能已经可用。
@@ -61,7 +61,7 @@ UFS、显示和触摸路径继续保留。这不是已经完成的原生 UniXNU 
 ## 快速开始
 
 ```sh
-git clone https://github.com/wuyuchen114514/unixnu-meizu21.git
+git clone https://github.com/XiaoChen8371/unixnu-meizu21.git
 cd unixnu-meizu21
 cp configs/local-inputs.example.env local-inputs.env
 . ./local-inputs.env

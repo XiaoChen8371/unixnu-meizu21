@@ -9,13 +9,7 @@
 | --- | --- | --- |
 | [UniXNU](https://github.com/UniXNU/UniXNU) | 菜单、配置和加载协议 | `04573c510c5fd4892ca6948739389141cc9e05f5` |
 | [DarwinBoot](https://github.com/UniXNU/DarwinBoot) | Darwin 原生启动参考 | `3c75734014cdab0acd9541e88057b7606ee7ae08` |
-| [Mu-Silicium](https://github.com/Project-Silicium/Mu-Silicium) | UEFI、EDK2 和 boot image 打包 | 本地 `Mu_Basecore` checkout |
 | [UniXNU-OnePlus-Ace5](https://github.com/tycykp/UniXNU-OnePlus-Ace5) | SM8650 和 Gen7 GPU 研究参考 | `aaa100d19f6fb14e5897a7e496edf7838d4d4e9f` |
-| [UniXNU-m2381](https://github.com/RiverKawa271828/UniXNU-m2381) | 魅族 SM8550 设备仓库参考 | 当前公开版本 |
-| [UniXNU-houji](https://github.com/lonzzi/UniXNU-houji) | SM8650 UFS、XNU 和 A750 参考 | 当前公开版本 |
-| [HackiOS](https://github.com/oosexgang/hakios-xnu-kernel) | retained Darwin compatibility chain | 区域/归档参考 |
-| [iOS Sweet](https://github.com/dipa-studio/ios-sweet) | iOS compatibility-chain reference | 当前公开版本 |
-| [Apple XNU](https://github.com/apple-oss-distributions/xnu) | 内核 ABI 和接口参考 | 对应源码版本 |
 
 ## 其他参考资料
 

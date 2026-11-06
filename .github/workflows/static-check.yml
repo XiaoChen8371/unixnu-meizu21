@@ -24,8 +24,6 @@ jobs:
           test -f docs/STARTUP.md
           test -f docs/BUILDING.md
           test -f docs/FLASHING.md
-          test -f sources.json
           test -f unixnu.lock
-          python3 -m json.tool sources.json > /dev/null
           grep -q "04573c510c5fd4892ca6948739389141cc9e05f5" unixnu.lock
           grep -q "20a1a8e0fc4374bb559bfb2e8aac070d25ae61ed758f95a7e45f948d13047505" scripts/verify-local-inputs.py

@@ -4,6 +4,15 @@ Unofficial device adaptation work for running **UniXNU** on the Meizu 21 / Snapd
 
 This repository publishes the **normal r20 transition source snapshot**. GPU bring-up experiments are intentionally excluded.
 
+## Start here
+
+1. Read the complete [STARTUP.md](STARTUP.md) guide.
+2. Download [r20-complete-open-source.tar.gz](r20-complete-open-source.tar.gz), SHA256 `d3833cbfac506708ab445ebeec47b4c59532727115303f8f3ccc3b48ba490694`.
+3. Copy `LOCAL-INPUTS.example.env`, provide your own permitted local inputs, and run `python3 scripts/verify-local-inputs.py`.
+4. Build with `bash scripts/package.sh`, then follow the boot_b-only flashing steps in STARTUP.md.
+
+The archive contains the bridge source, profiles, configs, packaging scripts, local-input verifier, memory-map audit, upstream pins and porting records. It is a complete open-source source bundle. Proprietary iOS and vendor binaries remain local.
+
 ## Current status
 
 - UniXNU graphical menu is working.
@@ -27,7 +36,7 @@ This is a transition-stage port. UniXNU provides the menu and loader protocol, w
 
 ## Source snapshot
 
-The r20 device adaptation source is stored in [device-source-r20.tar](device-source-r20.tar). It includes the board profile, bridge source, packaging checks, memory-map audit, kernel-source inventory, and device evidence.
+The complete buildable/open-source source bundle is [r20-complete-open-source.tar.gz](r20-complete-open-source.tar.gz). It includes the portable startup recipe, local-input verifier, board profile, bridge source, packaging checks, memory-map audit and kernel-source inventory. The earlier [device-source-r20.tar](device-source-r20.tar) is retained as the original evidence snapshot.
 
 The corresponding uncompiled upstream inputs are pinned in unixnu.lock inside the archive:
 
